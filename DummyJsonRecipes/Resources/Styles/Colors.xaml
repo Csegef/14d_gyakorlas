@@ -28,6 +28,11 @@
     <Color x:Key="Gray900">#212121</Color>
     <Color x:Key="Gray950">#141414</Color>
 
+
+    <Color x:Key="PColor">#FF003249</Color>
+    <Color x:Key="SColor">#FF007EA7</Color>
+    <Color x:Key="AColor">#FF80CED7</Color>
+
     <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}"/>
     <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource Secondary}"/>
     <SolidColorBrush x:Key="TertiaryBrush" Color="{StaticResource Tertiary}"/>
