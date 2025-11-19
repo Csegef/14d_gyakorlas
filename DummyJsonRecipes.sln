@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyJsonRecipes", "DummyJsonRecipes\DummyJsonRecipes.csproj", "{B0483F61-1EFE-431C-8FDB-7778F762F22D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0483F61-1EFE-431C-8FDB-7778F762F22D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0483F61-1EFE-431C-8FDB-7778F762F22D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0483F61-1EFE-431C-8FDB-7778F762F22D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B0483F61-1EFE-431C-8FDB-7778F762F22D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0483F61-1EFE-431C-8FDB-7778F762F22D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0483F61-1EFE-431C-8FDB-7778F762F22D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32019D05-7D7D-403E-BF45-6E1BD3E67700}
+	EndGlobalSection
+EndGlobal

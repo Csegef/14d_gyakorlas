@@ -1,0 +1,25 @@
+# Visual Studio cache and temp
+.vs/
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+
+# Build results
+*.dll
+*.exe
+*.pdb
+*.cache
+
+# .NET / MAUI project outputs
+**/bin/
+**/obj/
+
+# VS Code folders
+.vscode/
+
+# Other
+*.db
+*.log
