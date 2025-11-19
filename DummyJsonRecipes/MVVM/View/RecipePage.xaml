@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DummyJsonRecipes.MVVM.View.RecipePage"
+             Title="RecipePage" BackgroundColor="{StaticResource PColor}" NavigationPage.HasNavigationBar="False">
+    <ScrollView>
+        <Border VerticalOptions="Fill" HorizontalOptions="Fill" Margin="10" BackgroundColor="{StaticResource PColor}" StrokeShape="RoundRectangle 0,40,40,0">
+            <Grid RowDefinitions=".4*,.1*,.1*,.1*,.1*,.1*,.1*">
+                <Border StrokeShape="RoundRectangle 20,20,20,20" WidthRequest="200" HeightRequest="200">
+                    <Image Source="{Binding image}" WidthRequest="200" HeightRequest="200"/>
+                </Border>
+                <VerticalStackLayout Grid.Row="1" Padding="10">
+                    <HorizontalStackLayout Margin="0,5">
+                        <Label Text="Ingredients:" FontSize="18" TextColor="White" Margin="5,0,4,0"/>
+                        <Label Text="{Binding ingredients}" FontSize="18" TextColor="White" />
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Margin="0,5">
+                        <Label Text="Instructions:" FontSize="18" TextColor="White" Margin="5,0,4,0"/>
+                        <Label Text="{Binding instructions}" FontSize="18" TextColor="White" />
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Margin="0,5">
+                        <Label Text="Prep time (min):" FontSize="18" TextColor="White" Margin="5,0,4,0"/>
+                        <Label Text="{Binding prepTimeMinutes}" FontSize="18" TextColor="White" />
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Margin="0,5">
+                        <Label Text="Cook time (min):" FontSize="18" TextColor="White" Margin="5,0,4,0"/>
+                        <Label Text="{Binding cookTimeMinutes}" FontSize="18" TextColor="White" />
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Margin="0,5">
+                        <Label Text="Servings:" FontSize="18" TextColor="White" Margin="5,0,4,0"/>
+                        <Label Text="{Binding servings}" FontSize="18" TextColor="White" />
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Margin="0,5">
+                        <Label Text="Calories/serving:" FontSize="18" TextColor="White" Margin="5,0,4,0"/>
+                        <Label Text="{Binding caloriesPerServing}" FontSize="18" TextColor="White" />
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Margin="0,5">
+                        <Label Text="Difficulty:" FontSize="18" TextColor="White" Margin="5,0,4,0"/>
+                        <Label Text="{Binding difficulty}" FontSize="18" TextColor="White" />
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Margin="0,5">
+                        <Label Text="Reviews:" FontSize="18" TextColor="White" Margin="5,0,4,0"/>
+                        <Label Text="{Binding reviewCount}" FontSize="18" TextColor="White" />
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Margin="0,5">
+                        <Label Text="Rating:" FontSize="18" TextColor="White" Margin="5,0,4,0"/>
+                        <Label Text="{Binding rating}" FontSize="18" TextColor="White" />
+                    </HorizontalStackLayout>
+
+                </VerticalStackLayout>
+            </Grid>
+        </Border>
+    </ScrollView>
+</ContentPage>

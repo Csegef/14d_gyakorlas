@@ -2,23 +2,20 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
 
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private void collectionRecipes_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            count++;
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+        }
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+        private void buttonGet_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 

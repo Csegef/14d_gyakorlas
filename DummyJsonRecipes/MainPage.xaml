@@ -2,12 +2,45 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DummyJsonRecipes.MainPage"
-             Title="ListaPage">
+             Title="Főodlal" BackgroundColor="{StaticResource PColor}" NavigationPage.HasNavigationBar="False">
 
-    <Border Margin="10" VerticalOptions="Fill" Stroke="{StaticResource SColor}" BackgroundColor="{StaticResource PColor}" StrokeShape="RoundRectangle 20,20,20,20">
+    <Border VerticalOptions="Fill" Margin="10" Stroke="{StaticResource SColor}" BackgroundColor="{StaticResource PColor}" StrokeThickness="2" StrokeShape="RoundRectangle 0,40,40,0">
+        <Grid RowDefinitions=".2*,.7*,.1*">
+            <Label Text="A receptek:" TextColor="White" FontFamily="Arial" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <CollectionView x:Name="collectionRecipes" Grid.Row="1" SelectionMode="Single" EmptyView="No recipes" SelectionChanged="collectionRecipes_SelectionChanged">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Margin="2" BackgroundColor="{StaticResource SColor}" StrokeShape="RoundRectangle 80,80,80,80">
 
-        <CollectionView Margin="10" Grid.Row="2" HorizontalOptions="Center" ItemsSource="{Binding .}" SelectionMode="Single">
-        </CollectionView>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup Name="CommonStates">
+                                    <VisualState Name="Normal"></VisualState>
+                                    <VisualState Name="Selected">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="Black" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+
+                            <Grid ColumnDefinitions=".3*,.7*">
+                                <Border HorizontalOptions="Start" WidthRequest="80" StrokeShape="RoundRectangle 80,80,80,80" Margin="5">
+                                    <Image WidthRequest="80" HeightRequest="80" Source="{Binding image}"/>
+                                </Border>
+                                <HorizontalStackLayout Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start">
+                                    <Label Text="{Binding name}" FontSize="18" FontFamily="Arial" TextColor="White" Margin="5,0,4,0"/>
+                                    <Label Text="{Binding ingredients}" FontSize="18" FontFamily="Arial" TextColor="White" Margin="0,0,4,0"/>
+                                    <Label Text="{Binding difficulty}" TextColor="White" FontSize="18" FontFamily="Arial" Margin="0,0,4,0"/>
+                                </HorizontalStackLayout>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button x:Name="buttonGet" Text="Letöltés" BackgroundColor="{StaticResource AColor}" FontFamily="Arial" Grid.Row="2" Clicked="buttonGet_Clicked"/>
+        </Grid>
+
+
     </Border>
 
 </ContentPage>
